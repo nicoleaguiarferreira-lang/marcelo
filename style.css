@@ -1,0 +1,150 @@
+/* RESET E CONFIGURAÇÕES GERAIS DE ACESSIBILIDADE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a; /* Alto contraste para leitura */
+    background-color: #f8f9fa;
+}
+
+/* Link para leitores de tela/navegação via teclado */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+header {
+    background-color: #0d2b45; /* Azul escuro com alto contraste */
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #ffd700;
+    outline: 3px solid #ffd700; /* Foco visível via teclado */
+    outline-offset: 2px;
+}
+
+/* SEÇÕES */
+.section {
+    padding: 30px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    color: #0d2b45;
+    margin-bottom: 15px;
+}
+
+.section p, .section ul {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    margin-left: 20px;
+}
+
+.section li {
+    margin-bottom: 8px;
+}
+
+/* SEÇÃO E BOTÕES DE AJUDA */
+.section-ajuda {
+    background-color: #eef4f8;
+    border-bottom: none;
+}
+
+.ajuda-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-ajuda {
+    display: inline-block;
+    background-color: #c0392b; /* Vermelho escuro de fácil visualização */
+    color: #ffffff;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.btn-ligar {
+    background-color: #1b6ca8;
+}
+
+.btn-ajuda:hover,
+.btn-ajuda:focus {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+    outline: 3px solid #000000; /* Destaque de foco */
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #0d2b45;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* FOCO GERAL DE ACESSIBILIDADE (TECLADO) */
+a:focus, button:focus {
+    outline: 3px solid #000000;
+    outline-offset: 2px;
+}
